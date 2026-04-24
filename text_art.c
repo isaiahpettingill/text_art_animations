@@ -2,6 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
+#include <threads.h>
+
+#define __STDC_WANT_LIB_EXT1__ 1
+
+static void sleep_ms(long milliseconds) {
+    struct timespec duration = {
+        .tv_sec = milliseconds / 1000,
+        .tv_nsec = (milliseconds % 1000) * 1000000L
+    };
+
+    thrd_sleep(&duration, NULL);
+}
 
 int main(int argc, char *argv[]) {
     if (argc != 3) {
@@ -71,7 +84,7 @@ int main(int argc, char *argv[]) {
             }
             printf("%s", text_files[j]);
             fflush(stdout);
-            usleep(50000);
+            sleep_ms(50);
             first = 0;
         }
         i++;

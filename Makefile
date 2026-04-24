@@ -1,5 +1,5 @@
 CC = zig cc
-CFLAGS = -Ofast -Wall -march=native -mtune=native -flto
+CFLAGS = -Ofast -std=c2y -Wall -march=native -mtune=native -flto
 
 TARGET = text_art
 OUT_DIR = out

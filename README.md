@@ -2,11 +2,21 @@
 
 Play text art animations in the terminal
 
+## Python Version
+
     Usage: python3 text_art.py <folder> <loops>
 	    <folder>  Folder containing text art frames
 	    <loops>   Number of times to loop the animation or use -1 to loop until the user terminates the program
 
     Example: python3 text_art.py fireworks 3
+
+## C Version
+
+    Usage: ./text_art <folder> <loops>
+	    <folder>  Folder containing text art frames
+	    <loops>   Number of times to loop the animation or use -1 to loop until the user terminates the program
+
+    Example: ./text_art fireworks 3
 
 # Current animations:
 
